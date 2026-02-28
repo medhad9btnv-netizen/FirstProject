@@ -1,1 +1,96 @@
-My first Committed File
+
+sravi@Ravikumar MINGW64 /d/GitProject
+$ git clone -b SampleBranch https://github.com/medhad9btnv-netizen/FirstProject.git
+Cloning into 'FirstProject'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (6/6), done.
+
+sravi@Ravikumar MINGW64 /d/GitProject
+$ cd FirstProject/
+
+sravi@Ravikumar MINGW64 /d/GitProject/FirstProject (SampleBranch)
+$ git status
+On branch SampleBranch
+Your branch is up to date with 'origin/SampleBranch'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        MyFirstFile.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+sravi@Ravikumar MINGW64 /d/GitProject/FirstProject (SampleBranch)
+$ git status
+On branch SampleBranch
+Your branch is up to date with 'origin/SampleBranch'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        MyFirstFile.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+sravi@Ravikumar MINGW64 /d/GitProject/FirstProject (SampleBranch)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+sravi@Ravikumar MINGW64 /d/GitProject/FirstProject (SampleBranch)
+$ git add MyFirstFile.txt
+
+sravi@Ravikumar MINGW64 /d/GitProject/FirstProject (SampleBranch)
+$ git status
+On branch SampleBranch
+Your branch is up to date with 'origin/SampleBranch'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   MyFirstFile.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+
+sravi@Ravikumar MINGW64 /d/GitProject/FirstProject (SampleBranch)
+$ git commit -m "My first File commit"
+[SampleBranch a1aea04] My first File commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 MyFirstFile.txt
+
+sravi@Ravikumar MINGW64 /d/GitProject/FirstProject (SampleBranch)
+$ git status
+On branch SampleBranch
+Your branch is ahead of 'origin/SampleBranch' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+sravi@Ravikumar MINGW64 /d/GitProject/FirstProject (SampleBranch)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 339 bytes | 339.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/medhad9btnv-netizen/FirstProject.git
+   cfc7231..a1aea04  SampleBranch -> SampleBranch
+
+sravi@Ravikumar MINGW64 /d/GitProject/FirstProject (SampleBranch)

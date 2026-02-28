@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Human Deficiency Intelligence System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<h1 class="title">Human Deficiency Intelligence System</h1>
+
+<div class="layout">
+
+  <!-- ================= LEFT SYSTEM PANEL ================= -->
+  <aside class="system-panel">
+    <h3>🧠 How This System Thinks</h3>
+    <p class="panel-subtext">
+      Unlike normal tools, this system reasons before advising.
+    </p>
+
+    <ul>
+      <li>
+        <b>Step 1 – Human State</b><br/>
+        Identifies stress, urgency, and overload.
+      </li>
+      <li>
+        <b>Step 2 – Decision Context</b><br/>
+        Structures risk, time horizon, reversibility.
+      </li>
+      <li>
+        <b>Step 3 – Idea Evaluation</b><br/>
+        Evaluates <i>your</i> solutions, not generic answers.
+      </li>
+    </ul>
+
+    <div class="highlight">
+      ⚠️ Advice adapts to emotional state, not just logic.
+    </div>
+  </aside>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="content">
+
+    <!-- ================= STEP 1 ================= -->
+    <section class="step-card">
+      <span class="step-badge step-1">① Step 1</span>
+      <h2>Human State Analysis</h2>
+
+      <!-- Stress -->
+      <div class="slider-group">
+        <div class="slider-header">
+          <label>Stress Level</label>
+          <span class="slider-value" id="stressValue">5</span>
+        </div>
+        <div class="slider-scale">
+          <span>0</span><span>2</span><span>4</span><span>6</span><span>8</span><span>10</span>
+        </div>
+        <input type="range" min="0" max="10" value="5"
+               id="stress"
+               oninput="updateValue('stress','stressValue')" />
+      </div>
+
+      <!-- Time Pressure -->
+      <div class="slider-group">
+        <div class="slider-header">
+          <label>Time Pressure</label>
+          <span class="slider-value" id="timePressureValue">5</span>
+        </div>
+        <div class="slider-scale">
+          <span>0</span><span>2</span><span>4</span><span>6</span><span>8</span><span>10</span>
+        </div>
+        <input type="range" min="0" max="10" value="5"
+               id="time_pressure"
+               oninput="updateValue('time_pressure','timePressureValue')" />
+      </div>
+
+      <!-- Info Overload -->
+      <div class="slider-group">
+        <div class="slider-header">
+          <label>Information Overload</label>
+          <span class="slider-value" id="infoValue">5</span>
+        </div>
+        <div class="slider-scale">
+          <span>0</span><span>2</span><span>4</span><span>6</span><span>8</span><span>10</span>
+        </div>
+        <input type="range" min="0" max="10" value="5"
+               id="info_overload"
+               oninput="updateValue('info_overload','infoValue')" />
+      </div>
+
+      <!-- Fear of Loss -->
+      <div class="slider-group">
+        <div class="slider-header">
+          <label>Fear of Loss</label>
+          <span class="slider-value" id="fearValue">5</span>
+        </div>
+        <div class="slider-scale">
+          <span>0</span><span>2</span><span>4</span><span>6</span><span>8</span><span>10</span>
+        </div>
+        <input type="range" min="0" max="10" value="5"
+               id="fear_of_loss"
+               oninput="updateValue('fear_of_loss','fearValue')" />
+      </div>
+    </section>
+
+    <!-- ================= STEP 2 ================= -->
+    <section class="step-card">
+      <span class="step-badge step-2">② Step 2</span>
+      <h2>Decision Context Structuring</h2>
+
+      <label>Decision Type</label>
+      <select id="decisionType">
+        <option>Career</option>
+        <option>Financial</option>
+        <option>Academic</option>
+        <option>Health & Lifestyle</option>
+        <option>Relationships & Social</option>
+        <option>Personal Growth & Life Choices</option>
+      </select>
+
+      <label>Time Horizon</label>
+      <select id="timeHorizon">
+        <option>Short-term</option>
+        <option>Medium-term</option>
+        <option>Long-term</option>
+      </select>
+
+      <label>Risk Tolerance</label>
+      <select id="riskTolerance">
+        <option>Low</option>
+        <option>Medium</option>
+        <option>High</option>
+      </select>
+
+      <label>Is this decision reversible within 6 months?</label>
+      <select id="reversible">
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+
+      <label>Do you need a quick outcome?</label>
+      <select id="urgency">
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+
+      <label>Main cause of stress</label>
+      <select id="stressCause">
+        <option>Too many options</option>
+        <option>Fear of wrong choice</option>
+        <option>External pressure</option>
+        <option>Lack of information</option>
+      </select>
+    </section>
+
+    <!-- ================= STEP 3 ================= -->
+    <section class="step-card">
+      <span class="step-badge step-3">③ Step 3</span>
+      <h2>Decision Idea Exchange</h2>
+
+      <label>Solution 1</label>
+      <textarea id="solution1" placeholder="First option you are considering"></textarea>
+
+      <label>Solution 2</label>
+      <textarea id="solution2" placeholder="Second option (optional)"></textarea>
+
+      <label>Solution 3</label>
+      <textarea id="solution3" placeholder="Third option (optional)"></textarea>
+
+      <button class="primary-btn" onclick="analyzeDecision()">
+        🧠 Analyze My Decision
+      </button>
+    </section>
+
+    <!-- ================= RESULT ================= -->
+    <div id="decisionResult" class="result-card"></div>
+    <div id="result"></div>
+
+
+  </main>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
